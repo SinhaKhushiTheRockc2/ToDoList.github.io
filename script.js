@@ -17,6 +17,7 @@ const demo=document.getElementById('demo');
 const testHead=document.getElementById('test-head');
 // Adding event listener for the addtask button
 addTaskButton.addEventListener('click',()=>{
+    //Make the button display as none and textfield's display as block
     addTaskButton.style.display='none';
     inputText.style.display='block';
     inputText.focus();
@@ -24,10 +25,15 @@ addTaskButton.addEventListener('click',()=>{
 
 // Adding event listener for the text input
 inputText.addEventListener("keydown",(event)=>{
+    //If the user press enter after writing a text only then proceed
     if(event.key==='Enter'){
+        //Add the name of the task
         const taskName=document.createElement('p');
+        //Add the complete task button
         const taskButton=document.createElement('button');
+        //Add the delete button
         const deleteButton=document.createElement('span');
+        //Add the main task container
         const task=document.createElement('div');
         deleteButton.id='delete-button';
         taskName.textContent=inputText.value.trim().toUpperCase();
@@ -41,6 +47,7 @@ inputText.addEventListener("keydown",(event)=>{
         inputText.value='';
         inputText.style.display='none';
         addTaskButton.style.display='block';
+        //Add event listener for the complete task button
         taskButton.addEventListener('click',()=>completedTask(taskName));
         deleteButton.addEventListener('click',()=>removeTask(task));
         showPendingTask(val);
@@ -78,7 +85,7 @@ function removeTask(task){
 }
 
 
-//Function that removes the task from pending task list
+//Function that removes the task from pending task list and updates the pendingTaskContainer
 function removeFromPending(taskName){
     console.log(taskName.textContent);
     var items=pendingTaskList.getElementsByTagName('li');
