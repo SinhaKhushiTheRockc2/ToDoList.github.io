@@ -1,0 +1,234 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body,html{
+    height: 100%;
+    font-family:'Ubuntu', sans-serif;;
+}
+
+.bg{
+    background-image: url("background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Heading Container */
+#main-heading{
+    position: absolute;
+    top: 10rem;
+    left: 30%;
+    background-color: rgb(80, 80, 137);
+    width: 40%;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px black;
+}
+
+#main-heading h1{
+    font-size: 30px ;
+    padding: 4px;
+    color: white;
+}
+
+/* Bars */
+#bars{
+    position: absolute;
+    top: 10.2rem;
+    left: 31%;
+    z-index: 1;
+    background-color: rgb(80, 80, 137);
+}
+
+
+#bars i{
+    font-size: 25px;
+    padding: 6px;
+    color: white;
+}
+
+.bar-list{
+    display: none;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    border-top: 2px solid black;
+    box-shadow: 5px 5px 5px black;
+}
+
+.bar-list li{
+    border-bottom: 2px solid white;
+    padding: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+
+#bars i:hover .bar-list{
+    display: block;
+}
+
+/* Task List */
+#parent-container{
+    position: absolute;
+    top: 34%;
+    left: 30%;
+    background-color: rgb(80, 80, 137);
+    width: 40%;
+    padding: 3rem;
+    box-shadow: 5px 5px 5px black;
+    color: white;
+    border-radius: 1rem;
+}
+
+#task-container{
+    display: block;
+    position: relative;
+}
+
+#parent-container button{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    margin-right: 3rem;
+    background-color: white;
+}
+
+#parent-container button:hover{
+    background-color: rgb(120, 201, 201);
+}
+
+#parent-container span{
+    position: absolute;
+    right: 4%;
+    border-radius: 50%;
+}
+
+#parent-container span:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 5px black;
+    color: gray;
+}
+
+#parent-container p{
+    display: inline;
+    font-size: 1.2rem;
+}
+
+#completed-task-container{
+    display: none;
+}
+
+#completed-task-container div{
+    margin-bottom: 1rem;
+}
+
+#pending-task-container div{
+    margin-bottom: 1rem;
+}
+
+#pending-task-container{
+    display: none;
+}
+
+#pending-task-list{
+    margin-top: 2rem;
+}
+#pending-task-list li{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    list-style: none;
+}
+
+#information{
+    display: none;
+}
+#information h1{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#information li{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+/* Add Task button */
+#add-task{
+    position: absolute;
+    top:32%;
+    left: 33%;
+}
+
+#task-button{
+    background-color: rgb(80, 80, 137);
+    font-size: 1.2rem;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px black;
+}
+
+#task-button:hover{
+    color: black;
+}
+
+#input-text{
+    background-color: rgb(80, 80, 137);
+    font-size: 1rem;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px black;
+    display: none;
+    width: 32rem;
+}
+
+#input-text::placeholder{
+    color: rgb(42, 41, 41);
+}
+
+/* Common Classes */
+.heading{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.second-heading{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: black;
+}
+
+.task{
+    margin-top: 2rem;
+}
+@media screen and (max-width:1120px) {
+    /* Heading Section */
+    #main-heading{
+        width: 90%;
+        left: 4%;
+    }
+
+    #bars{
+        left: 6%;
+    }
+
+    /* Main Task Container */
+    #parent-container{
+        width: 90%;
+        left: 4%;
+    }
+
+    /* Add Task Button */
+    #add-task{
+        left: 8%;
+    }
+}
